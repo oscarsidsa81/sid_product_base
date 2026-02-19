@@ -39,4 +39,3 @@ class ProductProduct(models.Model):
         domain="[(\"location_type\", \"=\", \"pasillo\"), (\"active\", \"=\", True)]",
     )
     sid_pasillo = fields.Char(string="Pasillo (SID)")
-    sid_forecast_madrid = fields.Float(string="Forecast Madrid (SID)")
