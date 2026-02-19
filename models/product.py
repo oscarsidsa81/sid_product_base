@@ -25,6 +25,10 @@ class ProductTemplate(models.Model):
         domain="[(\"location_type\", \"=\", \"largo\"), (\"active\", \"=\", True)]",
     )
 
+    sid_pasillo = fields.Char(string="Pasillo (SID)")
+    sid_alto = fields.Char(string="Alto (SID)")
+    sid_lado = fields.Char(string="Lado (SID)")
+    sid_largo = fields.Char(string="Largo (SID)")
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
@@ -34,4 +38,5 @@ class ProductProduct(models.Model):
         string="Pasillo (SID)",
         domain="[(\"location_type\", \"=\", \"pasillo\"), (\"active\", \"=\", True)]",
     )
+    sid_pasillo = fields.Char(string="Pasillo (SID)")
     sid_forecast_madrid = fields.Float(string="Forecast Madrid (SID)")
