@@ -24,18 +24,3 @@ class ProductTemplate(models.Model):
         string="Largo",
         domain="[(\"location_type\", \"=\", \"largo\"), (\"active\", \"=\", True)]",
     )
-
-    sid_pasillo = fields.Char(string="Pasillo")
-    sid_alto = fields.Char(string="Alto")
-    sid_lado = fields.Char(string="Lado")
-    sid_largo = fields.Char(string="Largo")
-
-class ProductProduct(models.Model):
-    _inherit = "product.product"
-
-    sid_pasillo = fields.Many2one(
-        "sid.location.option",
-        string="Pasillo",
-        domain="[(\"location_type\", \"=\", \"pasillo\"), (\"active\", \"=\", True)]",
-    )
-    sid_pasillo = fields.Char(string="Pasillo")
