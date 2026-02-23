@@ -63,7 +63,8 @@ class ProductTemplate ( models.Model ) :
     @api.depends ( "weight", "standard_price", "categ_id.parent_id" )
     def _compute_precio_ton(self) :
         for record in self :
-            record.precio_ton = round (
+            if record.weight:
+                record.precio_ton = round (
                 (record.standard_price / record.weight * 1000), 0 ) or 0.0
 
     @api.depends ( "standard_price" )
