@@ -6,7 +6,7 @@
     "website" : "http://www.sidsaindustrial.com",
     "license" : "AGPL-3",
     "summary" : "Módulo de inclusión de pasillos y ubicaciones en stock",
-    "depends" : ["product"],
+    "depends" : ["product","stock"],
     "data" : [
         "security/ir.model.access.csv",
         "views/sid_location_views.xml",
