@@ -3,7 +3,7 @@ from odoo import fields, models
 
 class SidLocationOption(models.Model):
     _name = "sid.location.option"
-    _description = "SID Location Option"
+    _description = "Location Option"
     _order = "location_type, sequence, id"
 
     name = fields.Char(string="Etiqueta", required=True)
