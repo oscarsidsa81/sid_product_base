@@ -33,14 +33,14 @@
     </record>
 
     <record id="action_sid_location_option" model="ir.actions.act_window">
-        <field name="name">SID Ubicaciones</field>
+        <field name="name">Sidsa Ubicaciones-Productos</field>
         <field name="res_model">sid.location.option</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
         id="menu_sid_location_option"
-        name="SID Ubicaciones"
+        name="Sidsa Ubicaciones-Productos"
         parent="base.menu_administration"
         action="action_sid_location_option"
         sequence="95"
