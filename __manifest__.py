@@ -4,7 +4,7 @@
     "category" : "Inventory",
     "author" : "oscarsidsa81",
     "website" : "http://www.sidsaindustrial.com",
-    "license" : "AGPL-3",
+    "license" : "LGPL-3",
     "summary" : "Módulo de inclusión de pasillos y ubicaciones en stock",
     "depends" : ["product","stock"],
     "data" : [
