@@ -1,3 +1,5 @@
+from datetime import date, datetime
+
 from odoo import fields, api, models
 
 
@@ -7,7 +9,7 @@ class ProductTemplate ( models.Model ) :
     precio_ton = fields.Monetary ( string="Precio por Tonelada",
                                    help="Precio por Tonelada para el producto basado en Coste Medio\n"
                                         "y el peso unitario de la plantilla",
-                                   store=True,
+                                   store=False,
                                    readonly=True,
                                    tracking=True,
                                    compute="_compute_precio_ton",
@@ -15,12 +17,12 @@ class ProductTemplate ( models.Model ) :
     sid_forecasted_mad = fields.Float (
         string="Cant. Pronosticada Madrid",
         compute="_compute_sid_forecasted_mad",
-        store=True,
+        store=False,
     )
     sid_forecasted_ptllno = fields.Float (
         string="Cant. Pronosticada Puertollano",
         compute="_compute_sid_forecasted_ptllno",
-        store=True,
+        store=False,
     )
     sid_pasillo = fields.Many2one (
         "sid.location.option",
@@ -65,7 +67,9 @@ class ProductTemplate ( models.Model ) :
         for record in self :
             if record.weight:
                 record.precio_ton = round (
-                (record.standard_price / record.weight * 1000), 0 ) or 0.0
+                    (record.standard_price / record.weight * 1000), 0 ) or 0.0
+            else :
+                record.precio_ton = 0.0
 
     @api.depends ( "standard_price" )
     def _compute_sid_coste_medio(self) :

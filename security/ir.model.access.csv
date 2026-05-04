@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sid_location_option_manager,sid.location.option.manager,model_sid_location_option,base.group_system,1,1,1,1
+access_sid_location_option_user,sid.location.option.user,model_sid_location_option,base.group_user,1,0,0,0
